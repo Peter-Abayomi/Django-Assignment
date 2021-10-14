@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'blogs/styles/details-page.css' %}">
+</head>
+<body>
+    <main>
+        <h1>
+            Welcome to the Future Blog
+        </h1>
+        <h3 class="under-welcome">..where the future is brought to the present..</h3>
+    </main>
+    <div>
+        <h4>
+            <blockquote>“It has become appallingly obvious that our technology has exceeded our humanity.”</blockquote>
+            <address>Albert Einstein</address>
+        </h4>
+    </div>
+    <section>
+        <h2 class="heading">{{post.title}}</h2>
+        <span>{{post.author}}</span>
+        <span>{{post.created_date}}</span>
+        <div>
+            <img src="{{post.image.url}}" alt="Content Image">
+        </div>
+        <p>{{post.content}}</p>
+        <img src="{{post.another_image.url}}" alt="Content-Image">
+        <p>{{post.another_content}}</p>
+    </section>
+</body>
+</html>

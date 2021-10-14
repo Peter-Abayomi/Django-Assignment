@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+body{
+    background-color: #b3e0ff;
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    margin-top: 3rem;
+    font-size: 3.8rem;
+    color: #000099;
+    margin-bottom: 0;
+}
+h1,h2,h3,h4{
+    text-align: center;
+}
+.under-welcome {
+    margin-top: -0.75rem;
+    font-style: italic;
+}
+section{
+    margin-top: 5rem;
+}
+.card-contain{
+    width: 90%;
+    margin:  auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 0rem 4rem;
+}
+.titular {
+    font-size: 1.8rem;
+    align-content: flex-start;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    background-color: #66c2ff;
+    border-radius: 13px;
+    padding: 1.5rem 2rem;
+    margin: 1rem;
+}
+.btn{
+    background-color: #000099;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+}
+span{
+    color: #000099;
+    display: inline-block;
+    margin-right: 1rem;
+}
+.images {
+    width: 1350px;
+    height: 120px;
+    padding-bottom: 45px;
+}
+.footers{
+    text-align: center;
+    color: #fff;
+    background-color: #000000;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    font-style: bolder;
+    font-size: 15px;
+}

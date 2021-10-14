@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Future Blog</title>
+    <link rel="stylesheet" href="{% static 'blogs/styles/index.css' %}">
+</head>
+<body>
+    <main>
+        <h1>
+            Welcome to the Future Blog
+        </h1>
+        <h3 class="under-welcome">..where the future is brought to the present..</h3>
+    </main>
+    <div>
+        <h4>
+            <blockquote>“It has become appallingly obvious that our technology has exceeded our humanity.”</blockquote>
+            <address>Albert Einstein</address>
+        </h4>
+    </div>
+    <section>
+        <div>
+            {% for image in images %}
+                <img src="{{ image.image.url }}" class="images">
+            {% endfor %}
+        </div>
+        {% if posts %}
+        <div class="card-contain">
+            {% for post in posts %}
+                <div class="cards">
+                    <div>
+                        <h5 class="titular">{{post.title}}</h5>
+                        <span>{{post.author}}</span>
+                        <span>{{post.created_date}}</span>
+                    </div>
+                    <p>{{ post.display_content }}</p>
+                    <a href="/blogs/{{post.id}}"><button class="btn">Read more</button></a>
+                </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p>No post to display</p>
+        {% endif %}
+    </section>
+    <footer class="footers">
+        <p>Copyright 2021 &copy; The Future Blog by Abayomi</p>
+    </footer>
+</body>
+</html>
